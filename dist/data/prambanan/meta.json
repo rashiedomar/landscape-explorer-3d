@@ -1,0 +1,81 @@
+{
+ "site": "prambanan",
+ "width": 2236,
+ "height": 2251,
+ "mercator": [
+  12277257.770960132,
+  -888343.7047205154,
+  12322457.977004245,
+  -842844.8021806884
+ ],
+ "corners": [
+  [
+   110.28848302728653,
+   -7.549463398967828
+  ],
+  [
+   110.69452338663432,
+   -7.549463398967828
+  ],
+  [
+   110.69452338663432,
+   -7.954450914038544
+  ],
+  [
+   110.28848302728653,
+   -7.954450914038544
+  ]
+ ],
+ "center": [
+  110.4916,
+  -7.752
+ ],
+ "dry": [
+  "2025-07-01",
+  "2025-09-30"
+ ],
+ "wet": [
+  "2025-01-01",
+  "2025-03-31"
+ ],
+ "elev_p02": 30.923702239990234,
+ "elev_p98": 1014.8438720703125,
+ "water_km2": {
+  "2": 1.7,
+  "3": 0.7,
+  "4": 0.4
+ },
+ "landform": {
+  "site": "prambanan",
+  "contour_interval_m": 25,
+  "contours": 304,
+  "drainage_lines": 198,
+  "drainage_km": 1014.3,
+  "max_upstream_km2_in_box": 253.6,
+  "hand_pct_below_2m": 13.6,
+  "hand_valid_pct": 96.9,
+  "hand_negative_pct": 2.0,
+  "hand_pct_below_5m": 26.2,
+  "project_layers_added": [
+   "landform_drainage",
+   "landform_contours",
+   "landform_hand",
+   "landform_hillshade"
+  ]
+ },
+ "worldcover": [
+  10,
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  95,
+  100
+ ],
+ "has_temples": true,
+ "temples": 571
+}

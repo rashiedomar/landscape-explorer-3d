@@ -1,0 +1,81 @@
+{
+ "site": "srei_santhor",
+ "width": 2236,
+ "height": 2249,
+ "mercator": [
+  11668496.304003606,
+  1297463.2937560275,
+  11714223.621177753,
+  1343462.628843087
+ ],
+ "corners": [
+  [
+   104.81988572578585,
+   11.980265951235216
+  ],
+  [
+   105.23066120497903,
+   11.980265951235216
+  ],
+  [
+   105.23066120497903,
+   11.575747798093872
+  ],
+  [
+   104.81988572578585,
+   11.575747798093872
+  ]
+ ],
+ "center": [
+  105.025255,
+  11.778053
+ ],
+ "dry": [
+  "2025-02-01",
+  "2025-04-30"
+ ],
+ "wet": [
+  "2025-08-01",
+  "2025-10-31"
+ ],
+ "elev_p02": 1.5,
+ "elev_p98": 14.934925079345703,
+ "water_km2": {
+  "2": 148.9,
+  "3": 366.9,
+  "4": 30.9
+ },
+ "landform": {
+  "site": "srei_santhor",
+  "contour_interval_m": 1,
+  "contours": 1753,
+  "drainage_lines": 160,
+  "drainage_km": 470.6,
+  "max_upstream_km2_in_box": 96.7,
+  "hand_pct_below_2m": 73.5,
+  "hand_valid_pct": 87.7,
+  "hand_negative_pct": 14.26,
+  "hand_pct_below_5m": 93.3,
+  "project_layers_added": [
+   "landform_drainage",
+   "landform_contours",
+   "landform_hand",
+   "landform_hillshade"
+  ]
+ },
+ "worldcover": [
+  10,
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  95,
+  100
+ ],
+ "has_temples": true,
+ "temples": 187
+}

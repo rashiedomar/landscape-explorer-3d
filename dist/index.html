@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landscape signatures in 3D | Water, fields and terrain</title>
+  <link rel="stylesheet" href="vendor/maplibre-gl.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map" aria-label="3D map"></div>
+
+  <aside id="panel">
+    <header>
+      <p class="eyebrow">Exploratory satellite assessment, 2025</p>
+      <h1 id="site-title">Angkor in 3D</h1>
+      <p class="lede">How do water, fields and terrain fit together across an archaeological landscape, and how does that change between the dry and wet seasons?</p>
+    </header>
+
+    <nav id="sites" aria-label="Sites"></nav>
+
+    <section>
+      <h2>Season</h2>
+      <div class="segmented" id="season">
+        <button data-season="dry" class="on">Dry 2025</button>
+        <button data-season="wet">Wet 2025</button>
+      </div>
+      <p class="hint" id="season-dates"></p>
+    </section>
+
+    <section>
+      <h2>Layers</h2>
+      <div id="layers"></div>
+    </section>
+
+    <section>
+      <h2>Low-ground threshold</h2>
+      <label class="slider">
+        <input type="range" id="level" min="0" max="20" step="0.5" value="0">
+        <span id="level-label">off</span>
+      </label>
+      <p class="hint" id="level-note">Shade terrain up to this height above modelled drainage. This is not a water-level simulation.</p>
+    </section>
+
+    <footer>
+      <p>Satellite: Sentinel-2 2025. Terrain: Copernicus surface model (includes trees and buildings). Patterns shown here are not dated archaeological features.</p>
+      <p><a href="documents/Reading_and_terrain_notes.pdf" target="_blank" rel="noopener">Reading notes (PDF)</a> · <button class="link" id="open-sources">Sources &amp; methods</button></p>
+    </footer>
+  </aside>
+
+  <div id="topbar" role="toolbar">
+    <button id="toggle-3d" class="on" title="Tilt the map">3D view</button>
+    <span class="sep"></span>
+    <span class="label">Height ×</span>
+    <button data-ex="1">1</button><button data-ex="1.5">1.5</button><button data-ex="3">3</button><button data-ex="5" class="on">5</button><button data-ex="10">10</button>
+    <span class="sep"></span>
+    <button id="start-tour" class="accent">Map tour</button>
+  </div>
+
+  <section id="tour" hidden>
+    <p class="eyebrow">Map tour</p>
+    <h3 id="tour-title"></h3>
+    <p id="tour-text"></p>
+    <div class="tour-nav">
+      <button id="tour-prev" aria-label="Previous">‹</button>
+      <div class="progress"><span id="tour-bar"></span></div>
+      <span id="tour-count"></span>
+      <button id="tour-next" aria-label="Next">›</button>
+      <button id="tour-close" class="link">Exit</button>
+    </div>
+  </section>
+
+  <section id="inspect" hidden>
+    <div class="inspect-head">
+      <div><p class="eyebrow">Selected point</p><h3 id="inspect-title"></h3></div>
+      <button id="inspect-close" aria-label="Close">×</button>
+    </div>
+    <div id="inspect-body"></div>
+  </section>
+
+  <div id="legend"></div>
+
+  <dialog id="sources">
+    <div class="dialog-head"><h2>Sources &amp; methods</h2><button id="close-sources" aria-label="Close">×</button></div>
+    <div id="sources-body"></div>
+  </dialog>
+
+  <script src="vendor/maplibre-gl.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
